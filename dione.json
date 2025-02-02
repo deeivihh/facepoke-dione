@@ -1,0 +1,73 @@
+{
+    "dependencies": {
+        "test": {
+            "version": "latest"
+        }
+    },
+    "installation": [
+        {
+            "name": "Cloning repository",
+            "commands": [
+                "git clone https://github.com/jbilcke-hf/FacePoke.git facepoke"
+            ]
+        },
+        {
+            "name": "Create env and installing requirements",
+            "env": "env",
+            "commands": [
+                "cd facepoke",
+                "pip3 install --upgrade -r requirements.txt"
+            ]
+        },
+        {
+            "name": "Installing frontend dependencies",
+            "commands": [
+                "cd facepoke",
+                "bun install"
+            ]
+        },
+        {
+            "name": "Building frontend",
+            "commands": [
+                "cd facepoke",
+                "bun build ./src/index.tsx --outdir ../public/"
+            ]
+        }
+    ],
+    "start": [
+        {
+            "name": "Running script",
+            "catch": "8000",
+            "commands": [
+                "cd facepoke",
+                "app.py"
+            ]
+        }
+    ],
+    "stop": [
+        {
+            "name": "Stopping 'run-applio.bat'",
+            "type": "SHELL",
+            "commands": [
+                "taskkill /F /IM run-applio.bat"
+            ]
+        }
+    ],
+    "uninstall": [
+        {
+            "name": "Uninstalling Applio",
+            "type": "SHELL",
+            "commands": [
+                "rmdir /s /q applio"
+            ]
+        },
+        {
+            "name": "Uninstalling Git",
+            "type": "SHELL",
+            "not-required": true,
+            "commands": [
+                "start \"C:\\Program Files\\Git\\unins000.exe\""
+            ]
+        }
+    ]
+}
