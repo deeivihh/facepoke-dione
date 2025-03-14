@@ -2,6 +2,42 @@
     "dependencies": {
         "test": {
             "version": "latest"
+        },
+        "git": {
+            "version": "latest"
+        },
+        "http-server": {
+            "version": "^14.1.0"
+        },
+        "vercel": {
+            "version": "^29.0.0"
+        },
+        "serve": {
+            "version": "^13.0.2"
+        },
+        "wget": {
+            "version": "^1.0.0"
+        },
+        "pnpm": {
+            "version": "^8.5.1"
+        },
+        "yarn": {
+            "version": "^1.22.19"
+        },
+        "winget-cli": {
+            "version": "latest"
+        },
+        "foreman": {
+            "version": "^0.19.1"
+        },
+        "figlet": {
+            "version": "^1.5.0"
+        },
+        "rimraf": {
+            "version": "^3.0.2"
+        },
+        "npx": {
+            "version": "^10.2.0"
         }
     },
     "installation": [
